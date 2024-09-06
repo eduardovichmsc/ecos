@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { useAtom } from "jotai";
 import Image from "next/image";
 import Link from "next/link";

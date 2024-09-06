@@ -1,21 +1,19 @@
 "use client";
 
-import { useAtom, useAtomValue } from "jotai/react";
-import Link from "next/link";
+import { useAtomValue } from "jotai/react";
 import clsx from "clsx";
 
-import { Links, Navbar } from "@/app/shared/components/Navbar";
+import { Navbar } from "@/app/shared/components/Navbar";
 import { Footer } from "@/app/shared/components/Footer";
 import { isMenuOpenAtom } from "@/app/store/store";
 import { Sidebar } from "@/app/shared/components/Sidebard";
-import SmoothScrollProvider from "../shared/HOC/SmoothScroll";
 
 export default function RootLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-	const [isMenuOpen, setIsMenuOpen] = useAtom(isMenuOpenAtom);
+	const isMenuOpen = useAtomValue(isMenuOpenAtom);
 
 	return (
 		<div className="relative">

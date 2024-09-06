@@ -4,12 +4,10 @@ import Image from "next/image";
 
 import { motion } from "framer-motion";
 
-import { Swiper, SwiperSlide } from "swiper/react";
+// import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 import { Hero } from "@/app/shared/components/Hero";
-import { Navbar } from "@/app/shared/components/Navbar";
-import { Footer } from "@/app/shared/components/Footer";
 import { doneThingsData, howWeWorkData, swiperData } from "@/app/store/static";
 
 const sectionVariants = {
