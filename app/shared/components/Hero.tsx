@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Button } from "@/app/shared/ui/button";
 
 export const Hero = () => {
 	return (
@@ -19,13 +20,9 @@ export const Hero = () => {
 					<br />
 					отходами в сфере ТЭК
 				</p>
-				<div className="flex gap-10 *:transition *:duration-150">
-					<button className="bg-slate-800/90 text-white hover:bg-slate-800/100 py-4 px-10">
-						Услуги
-					</button>
-					<button className="bg-transparent text-black border-2 border-black hover:bg-black/80 hover:text-white py-4 px-10">
-						Получить консультацию
-					</button>
+				<div className="flex gap-10">
+					<Button primary>Услуги</Button>
+					<Button secondary>Получить консультацию</Button>
 				</div>
 			</div>
 			<div className="bg-stone-500 ml-auto relative z-10 w-[925px] h-[800px] mr-24">

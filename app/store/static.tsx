@@ -7,11 +7,11 @@ export const doneThingsData = [
 ];
 
 export const howWeWorkData = [
-	{ text: "Утилизация отходов бурения", icon: <Trash2 /> },
-	{ text: "Утилизация нефтесодержащих отходов", icon: <Trash /> },
-	{ text: "Рекультивация загрязненных земель", icon: <RefreshCcw /> },
-	{ text: "Экологический консталтинг", icon: <BookCopy /> },
-	{ text: "Транспортные услуги", icon: <Bus /> },
+	{ id: 0, text: "Утилизация отходов бурения", icon: <Trash2 /> },
+	{ id: 1, text: "Утилизация нефтесодержащих отходов", icon: <Trash /> },
+	{ id: 2, text: "Рекультивация загрязненных земель", icon: <RefreshCcw /> },
+	{ id: 3, text: "Экологический консталтинг", icon: <BookCopy /> },
+	{ id: 4, text: "Транспортные услуги", icon: <Bus /> },
 ];
 
 export const swiperData = [

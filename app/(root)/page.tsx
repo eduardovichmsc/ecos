@@ -1,14 +1,16 @@
 "use client";
 
 import Image from "next/image";
-
 import { motion } from "framer-motion";
 
 // import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+// import "swiper/css";
 
 import { Hero } from "@/app/shared/components/Hero";
 import { doneThingsData, howWeWorkData, swiperData } from "@/app/store/static";
+import { useState } from "react";
+import clsx from "clsx";
+import { Button } from "../shared/ui/button";
 
 const sectionVariants = {
 	initial: {
@@ -26,6 +28,8 @@ const sectionVariants = {
 };
 
 export default function Home() {
+	const [activeProperty, setActiveProperty] = useState(0);
+
 	return (
 		<main className="min-w-screen min-h-screen">
 			{/* wrapper -- start */}
@@ -50,7 +54,7 @@ export default function Home() {
 					{doneThingsData.map((data, index) => (
 						<div
 							key={index}
-							className="bg-green-700 text-white flex flex-col items-center text-center gap-4 py-8">
+							className="bg-green-800 text-white flex flex-col items-center text-center gap-4 py-8">
 							<p className="text-5xl">{data.title}</p>
 							<p
 								className="text-2xl"
@@ -65,7 +69,7 @@ export default function Home() {
 					variants={sectionVariants}
 					transition={{ duration: 0.5, delay: 0.3 }}
 					viewport={{ once: true }}
-					className="container h-[85vh] relative">
+					className="container h-[800px] relative">
 					<div className="w-full h-full absolute z-10 top-0 left-0 bg-black/75">
 						<Image src={"/medic.jpg"} fill className="object-cover" alt="" />
 					</div>
@@ -93,9 +97,7 @@ export default function Home() {
 							бурение и нефтедобычи
 							<br /> в разных климатических зонах РФ
 						</p>
-						<button className="bg-transparent text-black border-2 border-black hover:bg-black/80 hover:text-white py-4 px-10">
-							Подробнее
-						</button>
+						<Button secondary>Подробнее</Button>
 					</motion.div>
 				</motion.div>
 
@@ -105,7 +107,7 @@ export default function Home() {
 					variants={sectionVariants}
 					transition={{ duration: 0.5, delay: 0.3 }}
 					viewport={{ once: true }}
-					className="w-full h-screen bg-black/10">
+					className="w-full h-[900px] bg-black/10 shadow-sm">
 					<div className="container h-full flex items-center">
 						<div className="w-1/2 flex flex-col gap-10">
 							<p className="text-3xl">Выполняем работу в срок</p>
@@ -119,20 +121,23 @@ export default function Home() {
 							</p>
 
 							<div className="flex gap-10 self-start">
-								<button className="bg-slate-800/90 text-white hover:bg-slate-800/100 py-4 px-10">
-									Услуги
-								</button>
-								<button className="bg-transparent text-black border-2 border-black hover:bg-black/80 hover:text-white py-4 px-10">
-									Получить консультацию
-								</button>
+								<Button primary>Услуги</Button>
+								<Button secondary>Получить консультацию</Button>
 							</div>
 						</div>
 						<div className="w-1/2 flex flex-col gap-2">
-							{howWeWorkData.map((data, index) => (
+							{howWeWorkData.map((data) => (
 								<div
-									key={index}
-									className="bg-white w-full flex items-center shadow-lg shadow-black/10 gap-10 group transiton-all">
-									<div className="flex items-center justify-center aspect-square h-24 bg-white group-hover:bg-green-800 *:text-black *:group-hover:text-white *:transiton-all transiton-all">
+									key={data.id}
+									className="bg-white w-full flex items-center shadow-lg shadow-black/10 gap-10 transition-all"
+									onMouseEnter={() => setActiveProperty(data.id)}>
+									<div
+										className={clsx(
+											"flex items-center justify-center aspect-square h-24 bg-white text-black transition-all",
+											{
+												"text-white bg-green-800": activeProperty === data.id,
+											}
+										)}>
 										{data.icon}
 									</div>
 									<p className="text-2xl">{data.text}</p>
@@ -148,7 +153,7 @@ export default function Home() {
 					variants={sectionVariants}
 					transition={{ duration: 0.5, delay: 0.3 }}
 					viewport={{ once: true }}
-					className="container h-screen relative flex flex-col gap-14 py-14">
+					className="container h-[900px] relative flex flex-col gap-14 py-14">
 					<p className="font-semibold text-center text-5xl">
 						Выполненные проекты
 					</p>

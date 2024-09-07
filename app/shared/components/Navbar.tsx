@@ -79,7 +79,7 @@ export const Navbar = () => {
 				<div
 					className={clsx(
 						"h-[2px] w-[35%] bg-white transition-transform",
-						isMenuOpen && "-rotate-45 -translate-y-2.5"
+						isMenuOpen && "-rotate-45 translate-y-[-0.7rem]"
 					)}></div>
 			</div>
 		</nav>

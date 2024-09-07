@@ -28,7 +28,7 @@ export const Footer = () => {
 								src={"/logo.png"}
 								width={473}
 								height={167}
-								className="object-cover w-[20%] bg-white"
+								className="bg-white object-cover w-[20%]"
 								alt="logo"
 							/>
 						</Link>
@@ -47,7 +47,7 @@ export const Footer = () => {
 
 				<div className="w-full h-px bg-white/50"></div>
 
-				<div className="italic">заспидранено за +-5 часов</div>
+				<div className="italic">челы, дайте мидл закеррить</div>
 			</div>
 		</footer>
 	);

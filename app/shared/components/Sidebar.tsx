@@ -1,8 +1,10 @@
+"use client";
 import { isMenuOpenAtom } from "@/app/store/store";
+import { Links } from "@/app/shared/components/Navbar";
+
 import clsx from "clsx";
 import { useAtom } from "jotai/react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Links } from "./Navbar";
 import Link from "next/link";
 
 export const Sidebar = () => {
@@ -17,7 +19,7 @@ export const Sidebar = () => {
 			{isMenuOpen && (
 				<motion.div
 					className={clsx(
-						"fixed -right-7 top-0 h-full w-[410px] bg-slate-800 text-white shadow-lg flex flex-col justify-between"
+						"fixed right-0 top-0 h-full w-[20%] bg-slate-800 text-white shadow-lg flex flex-col justify-between"
 					)}
 					initial={{ opacity: 0, x: 20 }}
 					animate={{ opacity: 1, x: 0 }}
@@ -28,7 +30,7 @@ export const Sidebar = () => {
 							<Link
 								key={link.href}
 								href={link.href}
-								className="text-xl text-white/75 py-2 px-2 hover:underline hover:text-white transition">
+								className="text-xl text-white/75 py-2 px-2 hover:underline underline-offset-4 hover:text-white transition">
 								{link.title}
 							</Link>
 						))}
