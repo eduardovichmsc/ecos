@@ -2,14 +2,15 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import clsx from "clsx";
 
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import "swiper/css";
+import "swiper/css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 
 import { Hero } from "@/app/shared/components/Hero";
 import { doneThingsData, howWeWorkData, swiperData } from "@/app/store/static";
-import { useState } from "react";
-import clsx from "clsx";
 import { Button } from "@/app/shared/ui/Button";
 
 const sectionVariants = {
@@ -37,6 +38,7 @@ export default function Home() {
 			{/* wrapper -- start */}
 
 			<div className="flex flex-col gap-20">
+				{/* hero */}
 				<motion.div
 					initial="initial"
 					whileInView="animate"
@@ -46,17 +48,19 @@ export default function Home() {
 					className="">
 					<Hero />
 				</motion.div>
+
+				{/* under hero */}
 				<motion.div
 					initial="initial"
 					whileInView="animate"
 					variants={sectionVariants}
 					transition={{ duration: 0.5, delay: 0.3 }}
 					viewport={{ once: true }}
-					className="container grid grid-cols-3 gap-10">
+					className="container grid lg:grid-cols-3 grid-cols-1 lg:gap-10 gap-2">
 					{doneThingsData.map((data, index) => (
 						<div
 							key={index}
-							className="bg-green-800 text-white flex flex-col items-center text-center gap-4 py-8">
+							className="bg-green-800 text-white flex flex-col items-center text-center gap-4 lg:py-8 lg:px-0 py-6 px-8">
 							<p className="text-5xl">{data.title}</p>
 							<p
 								className="text-2xl"
@@ -65,6 +69,7 @@ export default function Home() {
 					))}
 				</motion.div>
 
+				{/* Собственные технологии */}
 				<motion.div
 					initial="initial"
 					whileInView="animate"
@@ -103,6 +108,7 @@ export default function Home() {
 					</motion.div>
 				</motion.div>
 
+				{/* Выполняем работу в срок */}
 				<motion.div
 					initial="initial"
 					whileInView="animate"
@@ -110,24 +116,24 @@ export default function Home() {
 					transition={{ duration: 0.5, delay: 0.3 }}
 					viewport={{ once: true }}
 					className="w-full h-[900px] bg-black/10 shadow-sm">
-					<div className="container h-full flex items-center">
-						<div className="w-1/2 flex flex-col gap-10">
+					<div className="container h-full flex items-center lg:justify-normal justify-center">
+						<div className="lg:w-1/2 flex flex-col gap-10 lg:px-0 px-2 w-max">
 							<p className="text-3xl">Выполняем работу в срок</p>
-							<p className="font-medium text-5xl">
+							<p className="font-medium text-5xl w-max">
 								Мы являемся <span className="text-green-800">экспертами</span>{" "}
 								<br /> в своём деле
 							</p>
-							<p className="text-2xl">
+							<p className="text-2xl w-max">
 								Наши знания и опыт обеспечивают качество наших <br /> решений и
 								услуг, отвечающее международным <br /> стандартам
 							</p>
 
-							<div className="flex gap-10 self-start">
+							<div className="flex gap-10 self-start w-max">
 								<Button primary>Услуги</Button>
 								<Button secondary>Получить консультацию</Button>
 							</div>
 						</div>
-						<div className="w-1/2 flex flex-col gap-2">
+						<div className="w-1/2 lg:flex flex-col gap-2 hidden">
 							{howWeWorkData.map((data) => (
 								<div
 									key={data.id}
@@ -155,37 +161,38 @@ export default function Home() {
 					variants={sectionVariants}
 					transition={{ duration: 0.5, delay: 0.3 }}
 					viewport={{ once: true }}
-					className="container h-[900px] relative flex flex-col gap-14 py-14">
+					className="container h-[800px] relative flex flex-col gap-14 py-14 lg:px-0 px-6">
 					<p className="font-semibold text-center text-5xl">
 						Выполненные проекты
 					</p>
-					<div className="flex gap-[inherit]">
+					<div className="flex gap-[inherit] w-full h-full">
 						{/* swiper -- start */}
 
-						{/* <Swiper
+						<Swiper
 							spaceBetween={50}
-							slidesPerView={3}
-							className="w-full h-full">
+							slidesPerView={2}
+							loop
+							autoplay={{ delay: 2500, pauseOnMouseEnter: true }}
+							modules={[Autoplay]}
+							className="w-full h-96 relative">
 							{swiperData.map((data, index) => (
 								<SwiperSlide
 									key={index}
-									className="h-96 w-1/2 bg-black/50 relative">
-									<div className="absolute w-full h-full"></div>
+									className="h-96 w-1/2 bg-black/10 relative">
+									<div className="absolute w-full h-full">
+										<Image
+											src={data.img}
+											alt={data.text}
+											className="object-cover"
+											fill
+										/>
+									</div>
 									<div className="bg-white absolute bottom-0 right-0 text-3xl p-10 w-[90%]">
 										{data.text}
 									</div>
 								</SwiperSlide>
 							))}
-						</Swiper> */}
-
-						{swiperData.map((data, index) => (
-							<div key={index} className="h-96 w-1/2 bg-black/10 relative">
-								<div className="absolute w-full h-full"></div>
-								<div className="bg-white absolute bottom-0 right-0 text-3xl p-10 w-[90%]">
-									{data.text}
-								</div>
-							</div>
-						))}
+						</Swiper>
 
 						{/* swiper -- end */}
 					</div>

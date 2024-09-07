@@ -19,7 +19,7 @@ export const footerContacts = [
 
 export const Footer = () => {
 	return (
-		<footer className="bg-neutral-700 w-full text-white py-10">
+		<footer className="bg-neutral-700 w-full text-white py-10 xl:lg-0 lg:px-4 px-6">
 			<div className="container w-full h-full flex flex-col gap-10">
 				<div className="flex">
 					<div className="w-3/5">

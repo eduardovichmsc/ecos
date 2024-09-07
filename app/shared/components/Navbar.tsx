@@ -25,16 +25,16 @@ export const Navbar = () => {
 		<nav className="flex items-center gap-10 container">
 			<Link
 				href={"/"}
-				className="logo text-3xl lowercase font-medium relative w-1/4">
+				className="logo text-3xl lowercase font-medium relative 2xl:w-1/4 w-fit">
 				<Image
 					src={"/logo.png"}
 					width={473}
 					height={167}
-					className="object-cover w-[50%]"
+					className="object-cover xl:w-[50%] w-full"
 					alt="logo"
 				/>
 			</Link>
-			<div className="flex justify-end font-medium text-xl basis-[80%] gap-20">
+			<div className="justify-end font-medium basis-[80%] gap-20 2xl:text-xl xl:text-lg md:text-sm lg:flex hidden">
 				{Links.map((link, index) => (
 					<Link
 						key={index}
@@ -44,8 +44,10 @@ export const Navbar = () => {
 					</Link>
 				))}
 			</div>
-			<div className="flex gap-4">
-				<Link href={"https://web.telegram.org"} className="size-10 relative">
+			<div className="gap-4 lg:flex hidden">
+				<Link
+					href={"https://web.telegram.org"}
+					className="xl:size-10 size-7 relative">
 					<Image
 						src={"/icons/telegram-64.png"}
 						fill
@@ -53,7 +55,9 @@ export const Navbar = () => {
 						alt="telegram"
 					/>
 				</Link>
-				<Link href={"https://web.telegram.org"} className="size-10 relative">
+				<Link
+					href={"https://web.telegram.org"}
+					className="xl:size-10 size-7 relative">
 					<Image
 						src={"/icons/vk-64.png"}
 						fill
@@ -63,7 +67,7 @@ export const Navbar = () => {
 				</Link>
 			</div>
 			<div
-				className="shrink-0 grow-0 h-24 aspect-square flex flex-col items-center justify-center bg-black/70 space-y-2 cursor-pointer z-30"
+				className="shrink-0 grow-0 h-24 aspect-square flex flex-col items-center justify-center bg-black/70 space-y-2 cursor-pointer z-30 ml-auto"
 				onClick={toggleMenu}>
 				{/* Menu icon - animated */}
 				<div
