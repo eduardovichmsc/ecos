@@ -13,9 +13,6 @@ const config: Config = {
 				foreground: "var(--foreground)",
 			},
 			container: { center: true, screens: { "2xl": "1525px" } },
-			transform: {
-				"flip-x": "scaleX(-1)",
-			},
 		},
 	},
 	plugins: [],

@@ -21,10 +21,10 @@ export const Sidebar = () => {
 					className={clsx(
 						"fixed right-0 top-0 h-full w-[20%] bg-slate-800 text-white shadow-lg flex flex-col justify-between"
 					)}
-					initial={{ opacity: 0, x: 20 }}
+					initial={{ opacity: 0, x: 50 }}
 					animate={{ opacity: 1, x: 0 }}
-					exit={{ opacity: 0, x: 20 }}
-					transition={{ duration: 0.3, ease: "easeInOut" }}>
+					exit={{ opacity: 0, x: 200 }}
+					transition={{ duration: 0.3 }}>
 					<div className="flex flex-col p-16 gap-4">
 						{Links.map((link) => (
 							<Link

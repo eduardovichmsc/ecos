@@ -45,22 +45,22 @@ export const Navbar = () => {
 				))}
 			</div>
 			<div className="flex gap-4">
-				<div className="size-10 relative">
+				<Link href={"https://web.telegram.org"} className="size-10 relative">
 					<Image
 						src={"/icons/telegram-64.png"}
 						fill
 						className="object-cover opacity-75 hover:opacity-100 transition"
 						alt="telegram"
 					/>
-				</div>
-				<div className="size-10 relative">
+				</Link>
+				<Link href={"https://web.telegram.org"} className="size-10 relative">
 					<Image
 						src={"/icons/vk-64.png"}
 						fill
 						className="object-cover opacity-75 hover:opacity-100 transition"
 						alt="vkontakte"
 					/>
-				</div>
+				</Link>
 			</div>
 			<div
 				className="shrink-0 grow-0 h-24 aspect-square flex flex-col items-center justify-center bg-black/70 space-y-2 cursor-pointer z-30"

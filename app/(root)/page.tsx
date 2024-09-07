@@ -30,6 +30,8 @@ const sectionVariants = {
 export default function Home() {
 	const [activeProperty, setActiveProperty] = useState(0);
 
+	console.log(activeProperty);
+
 	return (
 		<main className="min-w-screen min-h-screen">
 			{/* wrapper -- start */}
@@ -135,7 +137,7 @@ export default function Home() {
 										className={clsx(
 											"flex items-center justify-center aspect-square h-24 bg-white text-black transition-all",
 											{
-												"text-white bg-green-800": activeProperty === data.id,
+												"text-white bg-green-700": activeProperty === data.id,
 											}
 										)}>
 										{data.icon}
