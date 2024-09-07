@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Button } from "@/app/shared/ui/button";
+import { Button } from "@/app/shared/ui/Button";
 
 export const Hero = () => {
 	return (

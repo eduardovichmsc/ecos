@@ -10,7 +10,7 @@ import { Hero } from "@/app/shared/components/Hero";
 import { doneThingsData, howWeWorkData, swiperData } from "@/app/store/static";
 import { useState } from "react";
 import clsx from "clsx";
-import { Button } from "../shared/ui/button";
+import { Button } from "@/app/shared/ui/Button";
 
 const sectionVariants = {
 	initial: {
