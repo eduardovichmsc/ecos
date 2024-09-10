@@ -25,11 +25,11 @@ export const Hero = () => {
 					<Button secondary>Получить консультацию</Button>
 				</div>
 			</div>
-			<div className="bg-stone-500 md:bg-black ml-auto relative z-10 lg:w-[925px] md:w-[600px] w-full lg:h-[800px] md:h-[550px] h-full lg:mr-24">
+			<div className="md:bg-stone-500 bg-black ml-auto relative z-10 lg:w-[925px] md:w-[600px] w-full lg:h-[800px] md:h-[550px] h-full lg:mr-24">
 				<Image
 					src={"/hero.jpg"}
 					fill
-					className="object-cover opacity-50"
+					className="object-cover md:opacity-100 opacity-50"
 					style={{ transform: "scaleX(-1)" }}
 					alt=""
 				/>
