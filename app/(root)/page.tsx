@@ -12,6 +12,7 @@ import { Autoplay } from "swiper/modules";
 import { Hero } from "@/app/shared/components/Hero";
 import { doneThingsData, howWeWorkData, swiperData } from "@/app/store/static";
 import { Button } from "@/app/shared/ui/Button";
+import { useWindowSize } from "@/app/hooks/useWindowSize";
 
 const sectionVariants = {
 	initial: {
@@ -30,6 +31,7 @@ const sectionVariants = {
 
 export default function Home() {
 	const [activeProperty, setActiveProperty] = useState(0);
+	const values = useWindowSize();
 
 	console.log(activeProperty);
 
@@ -88,14 +90,14 @@ export default function Home() {
 						variants={sectionVariants}
 						transition={{ duration: 0.5, delay: 0.3 }}
 						viewport={{ once: true }}
-						className="w-full h-full absolute z-30 flex flex-col items-end justify-center text-end gap-14 p-14">
-						<p className="text-4xl">Собственные технологии</p>
-						<p className="font-medium text-5xl">
+						className="w-full h-full absolute z-30 flex flex-col items-end justify-center text-end md:gap-14 gap-4 md:p-14 p-6">
+						<p className="md:text-4xl text-2xl">Собственные технологии</p>
+						<p className="font-medium md:text-5xl text-3xl">
 							Оперативно принимаем
 							<br />
 							<span className="text-green-800">экологичные</span> решения
 						</p>
-						<p className="text-2xl">
+						<p className="md:text-2xl text-base">
 							Разработали и применяем <br />
 							&quot;Комплексную Технологию утилизаций <br />
 							промышленных отходов&quot; <br /> включающую в себя механическую,{" "}
@@ -119,17 +121,19 @@ export default function Home() {
 					<div className="container h-full flex items-center lg:justify-normal justify-center">
 						<div className="lg:w-1/2 flex flex-col gap-10 lg:px-0 px-2 w-max">
 							<p className="text-3xl">Выполняем работу в срок</p>
-							<p className="font-medium text-5xl w-max">
+							<p className="font-medium md:text-5xl w-max text-3xl">
 								Мы являемся <span className="text-green-800">экспертами</span>{" "}
 								<br /> в своём деле
 							</p>
-							<p className="text-2xl w-max">
+							<p className="md:text-2xl text-base w-max">
 								Наши знания и опыт обеспечивают качество наших <br /> решений и
 								услуг, отвечающее международным <br /> стандартам
 							</p>
 
-							<div className="flex gap-10 self-start w-max">
-								<Button primary>Услуги</Button>
+							<div className="flex md:gap-10 gap-4 self-start md:w-max w-full md:flex-row flex-col">
+								<Button primary className="md:w-max w-full">
+									Услуги
+								</Button>
 								<Button secondary>Получить консультацию</Button>
 							</div>
 						</div>
@@ -169,8 +173,8 @@ export default function Home() {
 						{/* swiper -- start */}
 
 						<Swiper
-							spaceBetween={50}
-							slidesPerView={2}
+							spaceBetween={values.width <= 640 ? 25 : 50}
+							slidesPerView={values.width <= 640 ? 1.1 : 2}
 							loop
 							autoplay={{ delay: 2500, pauseOnMouseEnter: true }}
 							modules={[Autoplay]}

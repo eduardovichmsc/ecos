@@ -19,7 +19,7 @@ export const Sidebar = () => {
 			{isMenuOpen && (
 				<motion.div
 					className={clsx(
-						"fixed right-0 top-0 h-full w-[20%] bg-slate-800 text-white shadow-lg flex flex-col justify-between"
+						"fixed right-0 top-0 h-full 2xl:w-[20%] bg-slate-800 text-white shadow-lg flex flex-col justify-between"
 					)}
 					initial={{ opacity: 0, x: 50 }}
 					animate={{ opacity: 1, x: 0 }}
