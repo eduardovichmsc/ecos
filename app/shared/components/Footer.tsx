@@ -37,8 +37,8 @@ export const Footer = () => {
 						{footerContacts.map((data, index) => (
 							<div
 								key={index}
-								className="md:text-xl text-base flex items-center">
-								<div className="aspect-square h-16 float-left bg-white/10 rounded-full mr-10 flex justify-center items-center">
+								className="md:text-xl text-base flex items-start">
+								<div className="aspect-square md:h-16 h-10 float-left bg-white/10 rounded-full mr-10 flex justify-center items-center">
 									{data.icon}
 								</div>
 								<p>{data.text}</p>

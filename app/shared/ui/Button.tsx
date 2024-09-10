@@ -22,8 +22,6 @@ export const Button: FC<PrimaryButtonProps | SecondaryButtonProps> = ({
 	children,
 	className,
 }) => {
-	console.log(className);
-
 	return (
 		<button
 			className={clsx(

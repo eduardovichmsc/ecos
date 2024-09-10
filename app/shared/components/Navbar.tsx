@@ -30,7 +30,7 @@ export const Navbar = () => {
 					src={"/logo.png"}
 					width={473}
 					height={167}
-					className="object-cover xl:w-[50%] w-full"
+					className="object-cover xl:w-[50%] w-[70%]"
 					alt="logo"
 				/>
 			</Link>
@@ -67,7 +67,7 @@ export const Navbar = () => {
 				</Link>
 			</div>
 			<div
-				className="shrink-0 grow-0 h-24 aspect-square flex flex-col items-center justify-center bg-black/70 space-y-2 cursor-pointer z-30 ml-auto"
+				className="shrink-0 grow-0 md:h-24 h-20 aspect-square flex flex-col items-center justify-center bg-black/70 space-y-2 cursor-pointer z-30 ml-auto"
 				onClick={toggleMenu}>
 				{/* Menu icon - animated */}
 				<div

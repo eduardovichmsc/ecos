@@ -63,9 +63,9 @@ export default function Home() {
 						<div
 							key={index}
 							className="bg-green-800 text-white flex flex-col items-center text-center gap-4 lg:py-8 lg:px-0 py-6 px-8">
-							<p className="text-5xl">{data.title}</p>
+							<p className="md:text-5xl text-3xl">{data.title}</p>
 							<p
-								className="text-2xl"
+								className="md:text-2xl text-base"
 								dangerouslySetInnerHTML={{ __html: data.body }}></p>
 						</div>
 					))}
@@ -191,7 +191,7 @@ export default function Home() {
 											fill
 										/>
 									</div>
-									<div className="bg-white absolute bottom-0 right-0 text-3xl p-10 w-[90%]">
+									<div className="bg-white absolute bottom-0 right-0 md:text-3xl text-xl md:p-10 p-5 w-[90%]">
 										{data.text}
 									</div>
 								</SwiperSlide>
