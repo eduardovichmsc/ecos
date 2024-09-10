@@ -119,7 +119,7 @@ export default function Home() {
 					viewport={{ once: true }}
 					className="w-full h-[900px] bg-black/10 shadow-sm">
 					<div className="container h-full flex items-center lg:justify-normal justify-center">
-						<div className="lg:w-1/2 flex flex-col gap-10 lg:px-0 px-6 w-max">
+						<div className="lg:w-1/2 flex flex-col gap-10 lg:px-0 px-2 w-max">
 							<p className="text-3xl">Выполняем работу в срок</p>
 							<p className="font-medium md:text-5xl w-max text-3xl">
 								Мы являемся <span className="text-green-800">экспертами</span>{" "}
