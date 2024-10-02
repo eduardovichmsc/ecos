@@ -5,15 +5,15 @@ import Link from "next/link";
 export const footerContacts = [
 	{
 		icon: <LucideBookmark />,
-		text: "Москва, Центральный админстративный округ, улица Академика Королева, 12 корпус 5",
+		text: "Кызылорда, Мұстафа Шоқай көшесі, 21",
 	},
 	{
 		icon: <Phone />,
-		text: "8 (800) 000-00-00",
+		text: "8 (747) 500 21 42",
 	},
 	{
 		icon: <Mail />,
-		text: "ecoil.info@mail.ru",
+		text: "contact@ecos.kz",
 	},
 ];
 
@@ -37,7 +37,7 @@ export const Footer = () => {
 						{footerContacts.map((data, index) => (
 							<div
 								key={index}
-								className="md:text-xl text-base flex items-start">
+								className="md:text-xl text-base flex items-center">
 								<div className="aspect-square md:h-16 h-10 float-left bg-white/10 rounded-full mr-10 flex justify-center items-center">
 									{data.icon}
 								</div>
@@ -49,7 +49,7 @@ export const Footer = () => {
 
 				<div className="w-full h-px bg-white/50"></div>
 
-				<div className="italic">done by __________</div>
+				<div className="italic">2024</div>
 			</div>
 		</footer>
 	);

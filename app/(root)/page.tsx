@@ -91,22 +91,20 @@ export default function Home() {
 						transition={{ duration: 0.5, delay: 0.3 }}
 						viewport={{ once: true }}
 						className="w-full h-full absolute z-30 flex flex-col items-end justify-center text-end md:gap-14 gap-4 md:p-14 p-6">
-						<p className="md:text-4xl text-2xl">Собственные технологии</p>
+						<p className="md:text-4xl text-2xl">Меншікті технологиялар</p>
 						<p className="font-medium md:text-5xl text-3xl">
-							Оперативно принимаем
+							<span className="text-green-800">Экологиялық</span> шешімдерді
 							<br />
-							<span className="text-green-800">экологичные</span> решения
+							жедел қабылдаймыз
 						</p>
 						<p className="md:text-2xl text-base">
-							Разработали и применяем <br />
-							&quot;Комплексную Технологию утилизаций <br />
-							промышленных отходов&quot; <br /> включающую в себя механическую,{" "}
-							<br />
-							микробиологическую, а также термическую <br /> утилизацию отходов
-							бурение и нефтедобычи
-							<br /> в разных климатических зонах РФ
+							Біз механикалық, микробиологиялық <br />
+							және термиялық өңдеуді қамтитын, бұрғылау және мұнай <br /> өндіру
+							қалдықтарын әртүрлі климаттық аймақтарда қайта <br /> өңдеуге
+							арналған 'Өндірістік қалдықтарды кешенді <br /> утилизациялау
+							технологиясын' әзірледік <br /> және қолданып келеміз.
 						</p>
-						<Button secondary>Подробнее</Button>
+						<Button secondary>Толығырақ</Button>
 					</motion.div>
 				</motion.div>
 
@@ -120,21 +118,22 @@ export default function Home() {
 					className="w-full h-[900px] bg-black/10 shadow-sm">
 					<div className="container h-full flex items-center lg:justify-normal justify-center">
 						<div className="lg:w-1/2 flex flex-col gap-10 lg:px-0 px-2 w-max">
-							<p className="text-3xl">Выполняем работу в срок</p>
+							<p className="text-3xl">Жұмысты уақытында орындаймыз</p>
 							<p className="font-medium md:text-5xl w-max text-3xl">
-								Мы являемся <span className="text-green-800">экспертами</span>{" "}
-								<br /> в своём деле
+								Біз өз ісіміздің <br />{" "}
+								<span className="text-green-800">шеберлеріміз</span>
 							</p>
 							<p className="md:text-2xl text-base w-max">
-								Наши знания и опыт обеспечивают качество наших <br /> решений и
-								услуг, отвечающее международным <br /> стандартам
+								Біздің біліміміз бен тәжірибеміз шешімдеріміз бен <br />
+								қызметтеріміздің сапасын халықаралық стандарттарға <br /> сай
+								қамтамасыз етеді
 							</p>
 
 							<div className="flex md:gap-10 gap-4 self-start md:w-max w-full md:flex-row flex-col">
 								<Button primary className="md:w-max w-full">
-									Услуги
+									Қызметтер
 								</Button>
-								<Button secondary>Получить консультацию</Button>
+								<Button secondary>Кеңес алу</Button>
 							</div>
 						</div>
 						<div className="w-1/2 lg:flex flex-col gap-2 hidden">
@@ -147,7 +146,7 @@ export default function Home() {
 										className={clsx(
 											"flex items-center justify-center aspect-square h-24 bg-white text-black transition-all",
 											{
-												"text-white bg-green-700": activeProperty === data.id,
+												"text-white bg-green-500": activeProperty === data.id,
 											}
 										)}>
 										{data.icon}
@@ -166,9 +165,7 @@ export default function Home() {
 					transition={{ duration: 0.5, delay: 0.3 }}
 					viewport={{ once: true }}
 					className="container h-[800px] relative flex flex-col gap-14 py-14 lg:px-0 px-6">
-					<p className="font-semibold text-center text-5xl">
-						Выполненные проекты
-					</p>
+					<p className="font-semibold text-center text-5xl">Жасалған жобалар</p>
 					<div className="flex gap-[inherit] w-full h-full">
 						{/* swiper -- start */}
 

@@ -8,10 +8,10 @@ import clsx from "clsx";
 import { isMenuOpenAtom } from "@/app/store/store";
 
 export const Links = [
-	{ title: "О компаний", href: "/about" },
-	{ title: "Услуги", href: "/services" },
-	{ title: "Выполненные проекты", href: "/projects" },
-	{ title: "Контакты", href: "/contacts" },
+	{ title: "Біз жайлы", href: "/about" },
+	{ title: "Қызметтер", href: "/services" },
+	{ title: "Жасалған жобалар", href: "/projects" },
+	{ title: "Байланыс", href: "/contacts" },
 ];
 
 export const Navbar = () => {

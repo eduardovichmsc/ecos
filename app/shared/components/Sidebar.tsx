@@ -39,7 +39,7 @@ export const Sidebar = () => {
 					<div
 						className="flex py-10 bg-black/10 hover:bg-black/30 transition justify-center text-lg cursor-pointer"
 						onClick={toggleMenu}>
-						Закрыть
+						Жабу
 					</div>
 				</motion.div>
 			)}

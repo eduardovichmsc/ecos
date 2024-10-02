@@ -7,22 +7,23 @@ export const Hero = () => {
 			<div className="h-full absolute z-20 md:w-full flex flex-col justify-center lg:gap-24 gap-10 md:pl-0 p-6">
 				<div className="justify-center">
 					<div className="font-semibold lg:text-6xl text-4xl">
-						<p>Сохраняем природу,</p>
+						<p>Табиғатты аялайық,</p>
 						<p>
-							строим будущее <span className="text-green-800">вместе</span>
+							болашақты <span className="text-green-800">бірге </span>
+							қалайық
 						</p>
 					</div>
 				</div>
 				<p className="lg:text-4xl text-2xl">
-					Внедряем комплексные технологические
+					Біз отын-энергетика секторында
 					<br />
-					решения по обращению с опасными
+					қауіпті қалдықтарды басқару бойынша кешенді
 					<br />
-					отходами в сфере ТЭК
+					технологиялық шешімдерді енгіземіз
 				</p>
 				<div className="flex lg:gap-10 gap-4 md:w-max w-full md:flex-row flex-col">
-					<Button primary>Услуги</Button>
-					<Button secondary>Получить консультацию</Button>
+					<Button primary>Қызметтер</Button>
+					<Button secondary>Кеңес алу</Button>
 				</div>
 			</div>
 			<div className="md:bg-stone-500 bg-white ml-auto relative z-10 lg:w-[925px] md:w-[600px] w-full lg:h-[800px] md:h-[550px] h-full lg:mr-24">
